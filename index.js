@@ -18,3 +18,32 @@ var port = process.env.PORT || 8000
 app.listen(port, function() {
     console.log(" http://localhost:" + port);
 });
+
+mongo=require('mongoose');
+
+var Schema=mongo.Schema;
+var expenseschema=new Schema({
+	_id:{
+		type:Date,
+		default:Date.now
+	},
+	Food:{
+		type:Number,
+	},
+	Transport:{
+		type:Number,
+	},
+	Grocery:{
+		type:Number,
+	},
+	Entertainment:{
+		type:Number,
+	},
+	Miscellaneous:{
+		type:Number,
+	},
+	Total:{
+		type:Number,
+	}
+});
+app.exports=mongo.model('Expenses',expenseschema)
