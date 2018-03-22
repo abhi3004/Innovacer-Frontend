@@ -20,6 +20,7 @@ app.listen(port, function() {
 });
 
 mongo=require('mongoose');
+mongo.connect('mongodb://localhost:27017/ExpenseManager');
 
 var Schema=mongo.Schema;
 var expenseschema=new Schema({
