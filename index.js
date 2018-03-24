@@ -23,6 +23,7 @@ mongo=require('mongoose');
 mongo.connect('mongodb://localhost:27017/ExpenseManager');
 
 var Schema=mongo.Schema;
+
 var expenseschema=new Schema({
 	_id:{
 		type:Date,
@@ -48,3 +49,9 @@ var expenseschema=new Schema({
 	}
 });
 app.exports=mongo.model('Expenses',expenseschema)
+app.get('/:id', function(req, res, next) {
+	expenses.findById(req.params.id, function (err, post) {
+	  if (err) return next(err);
+	  res.json(post);
+	});
+  });
