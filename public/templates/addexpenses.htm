@@ -1,6 +1,6 @@
-<h4>Add Today's Expenses</h4>
+<h4 class="heading">Add Today's Expenses</h4>
 <div align="center">
-<div class="card " id="settings1">
+<div class="card " id="settings2">
   <div class="card-content black-text">
   <span class="card-title">Category</span>
 
@@ -81,7 +81,7 @@
    <span ng-if="$window.localStorage.getItem('current_currency')==2">&nbsp &pound</span>
    <span ng-if="$window.localStorage.getItem('current_currency')==3">&nbsp &#8364</span>
    <span ng-if="$window.localStorage.getItem('current_currency')==4">&nbsp &yen</span>
-   <input type="number" placeholder=0.00 ng-model="manage.total=manage.food+manage.transport+manage.grocery+manage.entertainment+manage.misc" disabled></p>
+   <input type="number" placeholder=0.00 ng-value="manage.food+manage.transport+manage.grocery+manage.entertainment+manage.misc" disabled></p>
 
 </div>
 </div>

@@ -1,26 +1,28 @@
 <div align="center">
 
-    <div class="card " id="settings1">
+    <div class="card " id="settings2">
       <div class="card-content black-text">
-        <span class="card-title">You have spent  &#x20B9 0 today</span>
-        
+        <span ng-if="manage.total"><span class="card-title">You have spent  &#x20B9 {{manage.total}} today</span></span>
+        <span ng-if="!manage.total"><span class="card-title">You have'nt spent any money today</span></span>
+
 
       </div>
 
     </div>
-    <div class="card " id="settings1">
+    <span ng-if="manage.total">
+    <div class="card " id="chart">
       <div class="card-content black-text">
-        
+       
         <canvas id="doughnut" class="chart chart-doughnut"
-          chart-data="manage.data" chart-labels="manage.labels">
+          chart-data="manage.data" chart-labels="manage.labels" chart-colors="manage.colors">
         </canvas>
-
+       
         
         
 
       </div>
 
     </div>
-
-
+  </span>
+   <span ng-if="!manage.total"><div class="card " id="chart"><div class="card-content black-text" ><img src="images/cat.jpg"></div></div></span>
 </div>

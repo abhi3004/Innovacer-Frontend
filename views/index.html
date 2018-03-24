@@ -1,11 +1,14 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/angular-route/angular-route.js"></script>
   <script src="node_modules/chart.js/dist/Chart.js"></script>
   <script src="node_modules/angular-chart.js/angular-chart.js"></script>
   <script src="javascript/app.js"></script>
   <script src="fonts/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <link href="css/materialize/css/materialize.css" rel="stylesheet">
   <script src="css/materialize/js/materialize.js"></script>
@@ -23,15 +26,21 @@
     font-family: monospace;
   }
   #settings1{
-    width:450px;
+    width:40%;
+    height:25%;
+  }
+  #settings2{
+    width:40%;
+    height:15%;
+  }
+  #chart{
+    width:40%;
+    height:50%;
   }
   .pie-chart .slice {
   stroke: white;
 }
-.vl {
-    border-left: 6px solid red;
-    height: 500px;
-}
+
   </style>
 </head>
 <body ng-app="app">
@@ -42,9 +51,9 @@
 </span></a>
       <a href="#" class="brand-logo"> &nbsp My Spending</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#!/addexpenses"><i class="fas fa-plus fa-3x"></i> </a></li>
-        <li><a href="#!/monthly"><i class="fas fa-calendar fa-3x"></i></a></li>
-        <li><a href="#!/settings"><i class="fas fa-cog fa-3x"></i></a></li>
+        <li><a href="#!/addexpenses"><i class="fas fa-plus fa-2x"></i> </a></li>
+        <li><a href="#!/monthly"><i class="fas fa-calendar fa-2x"></i></a></li>
+        <li><a href="#!/settings"><i class="fas fa-cog fa-2x"></i></a></li>
       </ul>
     </div>
   </nav>
