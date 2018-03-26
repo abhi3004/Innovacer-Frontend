@@ -12,6 +12,14 @@
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <link href="css/materialize/css/materialize.css" rel="stylesheet">
   <script src="css/materialize/js/materialize.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet"> 
+
+  <!--BootStrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!--EOL-->
   <style>
   html {
     background-image: url('images/pattern4.png');
@@ -44,19 +52,53 @@
   </style>
 </head>
 <body ng-app="app">
-  <nav>
+  <nav class="navbar navbar-expand-sm bg-danger navbar-dark justify-content-between">
+    <!-- Navbar content -->
+
+    <a class="navbar-brand" href="#" style="font-family: 'Itim', cursive; font-size: 20px">
+      <img src="images/icon/credit-card.svg" width="50" height="50" class="d-inline-block align-center" alt="">
+     
+        &nbsp My Spending
+ 
+    </a>
+
+    <ul class="navbar-nav mr-aut">
+    <li class="nav-item">
+      <a class="nav-link" href="#!/addexpenses">
+        <img src="images/icon/cash.svg" width="35" height="30" class="d-inline-block align-center" alt="Add expenses">Add Expenses
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!/monthly">
+        <img src="images/icon/book.svg" width="35" height="30" class="d-inline-block align-center" alt="Monthly Expenditure">
+        Monthly Expenditure
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!/settings">
+        <img src="images/icon/settings.svg" width="35" height="30" class="d-inline-block align-center" alt="Settings">
+        Settings
+      </a>
+    </li>
+  </ul>
+    <!-- Ends-->
+    
+<!--
     <div class="nav-wrapper">
     <a href='#'>  <span style="font-size:4em; color:white">
   <i class="fas fa-credit-card"></i>
 </span></a>
       <a href="#" class="brand-logo"> &nbsp My Spending</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#!/addexpenses"><i class="fas fa-plus fa-2x"></i> </a></li>
-        <li><a href="#!/monthly"><i class="fas fa-calendar fa-2x"></i></a></li>
-        <li><a href="#!/settings"><i class="fas fa-cog fa-2x"></i></a></li>
+        <li><a href="#!/addexpenses"><i class="fas fa-plus fa-3x"></i> </a></li>
+        <li><a href="#!/monthly"><i class="fas fa-calendar fa-3x"></i></a></li>
+        <li><a href="#!/settings"><i class="fas fa-cog fa-3x"></i></a></li>
       </ul>
     </div>
+  -->
+
   </nav>
+
 <div ng-controller="manageCtrl as manage">
 <ng-view></ng-view>
 </div>

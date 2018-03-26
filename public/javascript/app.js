@@ -47,5 +47,5 @@ function manageCtrl($http,$window,$scope,$timeout,$interval){
   manage.data[4]=manage.misc;
   
 }, 3000);
-  
+  manage.category=['Food','Transport','Grocery','Entertainment','Misclenneous'];
 }
